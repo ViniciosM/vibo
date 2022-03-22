@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "841626617338",
+    "project_id": "vibo-9693f",
+    "storage_bucket": "vibo-9693f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:841626617338:android:8430d004ca97c3effb1043",
+        "android_client_info": {
+          "package_name": "br.edu.fpo.vibo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "841626617338-r11njtecr8kfh3g4dsr7kot67rn32i1p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_zCgkucqgpS6KoJDDSBezn5ErvBwRGbE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "841626617338-r11njtecr8kfh3g4dsr7kot67rn32i1p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

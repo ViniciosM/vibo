@@ -1,8 +1,15 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:vibo/screens/home_vibo.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  FirebaseFirestore.instance.collection('teste').doc('testamdpasd').set({
+    "teste": 123,
+    'teste2': 'firebase',
+  });
   //initializeDateFormatting();
   //await initializeParse();
   //setupLocators();
