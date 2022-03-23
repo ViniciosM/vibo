@@ -5,15 +5,25 @@ import 'package:vibo/screens/home_vibo.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  FirebaseFirestore.instance.collection('teste').doc('testamdpasd').set({
-    "teste": 123,
-    'teste2': 'firebase',
-  });
+  await initFirebase();
+
+
+  FirebaseFirestore.instance.collection('123').doc('abs').set({'teste': 'teste'});
   //initializeDateFormatting();
   //await initializeParse();
   //setupLocators();
   runApp(const MyApp());
+}
+
+Future<void> initFirebase() async {
+  Firebase.initializeApp(
+    options: FirebaseOptions(
+      apiKey: "AIzaSyB_zCgkucqgpS6KoJDDSBezn5ErvBwRGbE",
+      appId: "1:841626617338:android:8430d004ca97c3effb1043",
+      messagingSenderId: "841626617338",
+      projectId: "vibo-9693f",
+    ),
+  );
 }
 
 /*
