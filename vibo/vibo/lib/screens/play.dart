@@ -2,7 +2,9 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
 class PlayScreen extends StatefulWidget {
-  const PlayScreen({Key? key}) : super(key: key);
+  const PlayScreen({Key? key, required this.docId}) : super(key: key);
+
+  final String docId;
 
   @override
   _PlayScreenState createState() => _PlayScreenState();
