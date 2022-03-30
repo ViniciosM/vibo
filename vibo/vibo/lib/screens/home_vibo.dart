@@ -26,12 +26,12 @@ class _HomeViboScreenState extends State<HomeViboScreen> {
               width: 10,
             ),
             Text(
-              'by Vinicios 2021/22',
+              'by Vinicios',
               style: TextStyle(fontSize: 14),
             )
           ],
         ),
-        centerTitle: false,
+        centerTitle: true,
         actions: [
           Padding(
             padding: EdgeInsets.only(right: 20),
@@ -72,7 +72,7 @@ class _HomeViboScreenState extends State<HomeViboScreen> {
                 width: MediaQuery.of(context).size.width * 0.6,
                 height: 50,
                 decoration: BoxDecoration(
-                  color: Colors.green[600],
+                  color: Colors.green[800],
                   borderRadius: BorderRadius.circular(12.0),
                   boxShadow: const [
                     BoxShadow(
@@ -148,7 +148,7 @@ class _HomeViboScreenState extends State<HomeViboScreen> {
                 width: MediaQuery.of(context).size.width * 0.6,
                 height: 50,
                 decoration: BoxDecoration(
-                  color: Colors.indigo,
+                  color: Colors.indigo[800],
                   borderRadius: BorderRadius.circular(12.0),
                   boxShadow: const [
                     BoxShadow(
