@@ -1,20 +1,21 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:vibo/models/vibo_model.dart.dart';
 
 class ViboRepository {
-
   final firebase = FirebaseFirestore.instance.collection('vibo');
 
-  Future<List<String>> getImages(String docId) async {
-    List<String> urlImages = [];
-    var snapshot = await firebase.doc(docId).get().then(((DocumentSnapshot docSnap){
-      if(docSnap.exists){
-        urlImages = ViboModel.fromDocument(docSnap);
-      }
-    }));
-
-    
+  Future<ViboModel?> getImages(String docId) async {
+    ViboModel viboImg;
+    try {
+      await firebase.doc(docId).get().then(((DocumentSnapshot docSnap) {
+        if (docSnap.exists) {
+          viboImg = ViboModel.fromDocument(docSnap);
+        } else {
+          return null;
+        }
+      }));
+    } catch (e) {
+      throw Exception(e);
+    }
   }
-
 }
