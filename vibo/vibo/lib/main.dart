@@ -1,11 +1,13 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 import 'package:vibo/screens/home_vibo.dart';
+import 'package:vibo/screens/player_store.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
+  GetIt.I.registerSingleton(PlayerStore());
   await Firebase.initializeApp(
       options: FirebaseOptions(
           apiKey: 'AIzaSyB_zCgkucqgpS6KoJDDSBezn5ErvBwRGbE',
@@ -13,7 +15,7 @@ void main() async {
           messagingSenderId: '841626617338',
           projectId: 'vibo-9693f'));
 
-           FirebaseFirestore.instance
+  FirebaseFirestore.instance
       .collection('123')
       .doc('abs')
       .set({'teste': 'teste'});
